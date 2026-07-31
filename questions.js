@@ -149,5 +149,6 @@ const quizQuestions_set1 = [
 ];
 
 
-const quizQuestions_list = [quizQuestions_set1, quizQuestions_set2, quizQuestions_set3]
-const quizQuestions = arr => arr[Math.floor(Math.random() * arr.length)];
+// const quizQuestions_list = [quizQuestions_set1, quizQuestions_set2, quizQuestions_set3]
+// const quizQuestions = arr => arr[Math.floor(Math.random() * arr.length)];
+const quizQuestions = quizQuestions_set1
