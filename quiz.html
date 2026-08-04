@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A professional assessment portal testing core and advanced concepts in Data Science and Artificial Intelligence.">
+  <title>Data Science & AI Assessment Portal</title>
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+  <!-- Sticky Assessment Header -->
+  <header class="assessment-header" id="assessmentHeader">
+    <div class="header-container">
+      <div class="brand">
+        <h1 class="brand-title">Data Science & AI Quiz</h1>
+        <p class="brand-subtitle">Core & Advanced Level Assessment</p>
+      </div>
+      
+      <div class="header-stats">
+        <div class="stat-box">
+          <span class="stat-label">Progress</span>
+          <span class="stat-value" id="progressText">0 / 10 Answered</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;"></div>
+          </div>
+        </div>
+        
+        <div class="stat-box timer-box" id="timerBox">
+          <span class="stat-label">Time Remaining</span>
+          <span class="stat-value" id="timerDisplay">10:00</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Quiz Container -->
+  <main class="quiz-container">
+    <form id="quizForm" autocomplete="off" onsubmit="event.preventDefault();">
+      
+      <!-- Container where JS will dynamically inject the question cards -->
+      <div id="questionsContainer">
+        <!-- Dynamically generated from questions.js -->
+      </div>
+
+      <!-- Submit Section -->
+      <div class="submit-section">
+        <button type="button" class="submit-btn" id="submitBtn">Submit Quiz</button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- Overlay Modal for Results -->
+  <div class="results-modal" id="resultsModal">
+    <div class="results-card">
+      <div class="results-icon-container" id="resultsIconContainer">
+        <!-- Will be filled dynamically by JS with SVG depending on pass/fail -->
+      </div>
+      <h2 class="results-title" id="resultsTitle">Quiz Completed</h2>
+      <p class="results-description" id="resultsDescription">Your results have been processed.</p>
+      
+      <div class="results-score-display">
+        <span class="score-percentage" id="scorePercentage">0%</span>
+        <span class="score-ratio" id="scoreRatio">0 / 10 Correct</span>
+      </div>
+
+      <div class="results-status-badge" id="resultsStatusBadge">PASSED</div>
+      
+      <p class="results-details" id="resultsDetails">
+        A passing score of 70% or higher is required.
+      </p>
+
+      <button type="button" class="restart-btn" id="restartBtn">Review Answers</button>
+    </div>
+  </div>
+
+  <!-- Assessment Questions Configuration -->
+  <script src="questions.js"></script>
+  <!-- Main Application Logic -->
+  <script src="quiz.js"></script>
+</body>
+</html>
