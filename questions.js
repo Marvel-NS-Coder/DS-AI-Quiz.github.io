@@ -129,26 +129,26 @@ const quizQuestions_set1 = [
   {
     id: 9,
     badge: "Statistics",
-    badgeClass: "badge-advanced",
-    question: "Consider Simpson's Paradox in statistics. Which of the following best describes this phenomenon?",
+    badgeClass: "badge-intermediate",
+    question: "When conducting a statistical hypothesis test, what does a Type II error represent?",
     options: {
-      A: "A statistical trend appears in several different groups of data but disappears or reverses when the groups are combined.",
-      B: "A model performs exceptionally well on the training data but completely fails to generalize to independent test data.",
-      C: "Increasing the sample size of a study results in a higher probability of committing a Type I statistical error.",
-      D: "In a linear regression model, two or more predictor variables are highly correlated with each other (multicollinearity)."
+      A: "Rejecting the null hypothesis when it is actually true.",
+      B: "Failing to reject the null hypothesis when it is actually false.",
+      C: "Calculating a p-value that is greater than the standard alpha level of 0.05.",
+      D: "Failing to meet the assumption of normality before applying a parametric test."
     },
-    correctAnswer: "A"
+    correctAnswer: "B"
   },
   {
     id: 10,
-    badge: "Generative AI",
-    badgeClass: "badge-advanced",
-    question: "What is the fundamental difference in how GANs (Generative Adversarial Networks) and Diffusion Models generate new data samples?",
+    badge: "GenAI",
+    badgeClass: "badge-intermediate",
+    question: "In Parameter-Efficient Fine-Tuning (PEFT) using LoRA (Low-Rank Adaptation), how are trainable parameters integrated into the original pre-trained Transformer weights?",
     options: {
-      A: "GANs generate data through an autoregressive token-by-token process, while Diffusion Models generate the entire sample in a single forward pass.",
-      B: "GANs optimize the evidence lower bound (ELBO) directly, while Diffusion Models use adversarial loss.",
-      C: "GANs learn a mapping from a latent distribution using a generator-discriminator game, while Diffusion Models learn to iteratively reverse a noise addition process to reconstruct data.",
-      D: "GANs are unsupervised while Diffusion Models are strictly supervised using labeled training datasets."
+      A: "By unfreezing all existing weight matrices and applying L1 regularization to force low-rank sparsity.",
+      B: "By replacing the original attention mechanism with a low-rank convolution block across all sequence tokens.",
+      C: "By freezing the original weights and adding rank-decomposition matrices (A and B) in parallel to targeted linear layers.",
+      D: "By appending new trainable embeddings directly onto the input prompt sequence without altering the weight layers."
     },
     correctAnswer: "C"
   }
